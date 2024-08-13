@@ -10,6 +10,7 @@ process.on("uncaughtException", (err) => {
 
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
   require("dotenv").config({
     path: "config/.env",
   });
